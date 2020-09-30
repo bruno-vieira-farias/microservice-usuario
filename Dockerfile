@@ -4,7 +4,7 @@ WORKDIR /home/app
 COPY pom.xml .
 RUN mvn dependency:resolve
 
-COPY src/ /home/app/src
+COPY src /home/app/src
 RUN mvn package
 
 # Package stage
