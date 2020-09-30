@@ -5,7 +5,7 @@ COPY pom.xml .
 RUN mvn dependency:resolve
 
 COPY src/ /home/app/src
-RUN mvn -DUSUARIO_DB_HOST=host -DUSUARIO_DB_PORT=27018 package
+RUN mvn package
 
 # Package stage
 FROM openjdk:8-jdk-alpine
